@@ -30,7 +30,7 @@ public class RecyclerViewTouchHelper extends ItemTouchHelper.SimpleCallback {
     public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
          final int position = viewHolder.getAdapterPosition();
          if (direction == ItemTouchHelper.RIGHT){
-             AlertDialog.Builder builder = new AlertDialog.Builder(adapter.getcontext());
+             AlertDialog.Builder builder = new AlertDialog.Builder(adapter.getContext());
              builder.setTitle("Delete Task");
              builder.setMessage("Are you sure");
              builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
@@ -57,9 +57,9 @@ public class RecyclerViewTouchHelper extends ItemTouchHelper.SimpleCallback {
     public void onChildDraw(@NonNull Canvas c, @NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
 
         new RecyclerViewSwipeDecorator.Builder(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive)
-                .addSwipeLeftBackgroundColor(ContextCompat.getColor(adapter.getcontext(),R.color.ColorPrimary))
+                .addSwipeLeftBackgroundColor(ContextCompat.getColor(adapter.getContext(),R.color.ColorPrimary))
                 .addSwipeLeftActionIcon(R.drawable.ic_baseline_edit)
-                .addSwipeRightBackgroundColor(ContextCompat.getColor(adapter.getcontext(), R.color.Delete_Task ))
+                .addSwipeRightBackgroundColor(ContextCompat.getColor(adapter.getContext(), R.color.Delete_Task ))
                 .addSwipeRightActionIcon(R.drawable.ic_baseline_delete)
                 .create()
                 .decorate();

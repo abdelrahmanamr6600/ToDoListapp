@@ -57,7 +57,7 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.MyViewHolder> 
 
     }
     public  boolean toboolean ( int num ) { return num !=0; }
-    public Context getcontext()
+    public Context getContext()
     {
         return activity;
     }
