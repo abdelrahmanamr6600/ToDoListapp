@@ -71,7 +71,7 @@ public void updateTask( int id , String task)
      db.delete(task_table,"ID=?",new String[]{String.valueOf(id)});
  }
  public List<ToDoModel> getallTasks(){
-        db= this.getWritableDatabase();
+        db= this.getReadableDatabase();
      Cursor cursor = null;
      List<ToDoModel> tasks_List = new ArrayList<>();
      db.beginTransaction();
